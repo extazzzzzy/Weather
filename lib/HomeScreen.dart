@@ -10,7 +10,7 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   final TextEditingController cityController = TextEditingController();
-  WeatherRequest wr = WeatherRequest('dc87cd53ea924e3b9c165513241111 ', language: Language.russian);
+  WeatherRequest wr = WeatherRequest('01543779bf7e4787b46140740241111', language: Language.russian);
   String currentCountry = ''; // страна
   String currentCity = ''; // город
   String currentTemperature = ''; // темп в цельсиях min
@@ -25,8 +25,8 @@ class _HomeScreenState extends State<HomeScreen> {
       return;
     }
 
-    //ForecastWeather fw = await wr.getForecastWeatherByCityName(currentCity);
-    // ForecastDayData forecastDay = forecastWeather.forecast[0];
+    // ForecastWeather fw = await wr.getForecastWeatherByCityName(currentCity);
+    // ForecastDayData forecastDay = fw.forecast[0];
     // print(forecastDay.day.maxtempC);
 
     RealtimeWeather currentWeather = await wr.getRealtimeWeatherByCityName(currentCity);
